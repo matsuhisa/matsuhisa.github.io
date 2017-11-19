@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta charset='utf-8'>
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'>
+<title>「楽々ERDレッスン」を読みました | めも帖</title>
+<link href="/stylesheets/site.css" rel="stylesheet" />
+<script src="/javascripts/all.js"></script>
+<link href='http://a-walker.me/articles/2017/04/book_erd.html' rel='canonical'>
+<meta content='「楽々ERDレッスン」を流し読みしました。テーブル設計を学ぶ機会が、なかなかないので役立つ1冊だと思います。出版されて11年たっても、実践に即していると思いました' name='description'>
+<meta content='' property='og:site_name'>
+<meta content='「楽々ERDレッスン」を読みました' property='og:title'>
+<meta content='http://a-walker.me/images/2017/4/book_4798110663.jpg' property='og:image'>
+<meta content='「楽々ERDレッスン」を流し読みしました。テーブル設計を学ぶ機会が、なかなかないので役立つ1冊だと思います。出版されて11年たっても、実践に即していると思いました' property='og:description'>
+<meta content='' property='og:url'>
+<meta content='summary_large_image' name='twitter:card'>
+<meta content='' name='twitter:site'>
+<meta content='「楽々ERDレッスン」を読みました' name='twitter:title'>
+<meta content='http://a-walker.me/images/2017/4/book_4798110663.jpg' name='twitter:image:src'>
+<meta content='「楽々ERDレッスン」を流し読みしました。テーブル設計を学ぶ機会が、なかなかないので役立つ1冊だと思います。出版されて11年たっても、実践に即していると思いました' name='twitter:description'>
+</head>
+<body></body>
+<p class='blog_title'><a href="/">めも帖</a></p>
+<div class='wrapper'>
+<h1>「楽々ERDレッスン」を読みました</h1>
+<div class='article'>
+<time>2017年4月19日</time>
+<h2>まとめると</h2>
+
+<ul>
+<li>データベースのテーブル設計をする時に必要な考え方が掴める</li>
+<li>現実に即した実例が数個あり理論と実践が近づいたように感じられる（わかった気になる）</li>
+<li>テーブル設計で聞く「正規化」について解説をしないが、ビジネス要件での正規化についてわかる</li>
+<li><code>One Fact in One Place</code> 「1つの事実は1つの場所に
+」</li>
+</ul>
+
+<h2>読んだきっかけ</h2>
+
+<ul>
+<li>SQLアンチパターンを読んでから、「適切なテーブル設計」って何？と思っていたので</li>
+<li>会社の課題図書になりました</li>
+</ul>
+
+<h2>読んでみて</h2>
+
+<h3>正規化</h3>
+
+<p>「正規化」という言葉をテーブル設計では聞くけれど、「正規化をあえてしない場面がある」という言葉も聞いていたので、「どいうことなんだろう？」と思っていました。その理由も書いてあるんですが、それよりも「ビジネス要件での正規化」について考えることが実務では大切そう。<br>
+でも、「正規化」について知る必要性も感じます。「正規化」についてしったうえで、「ビジネス要件での正規化」をする方が自分の設計について賢者から学ぶことができるように感じます。</p>
+
+<h3>ヒアリングの大切さ</h3>
+
+<p>テーブル設計をするときに、業務についてのことをヒアリングすることの大切さについて書かれています。<br>
+ビジネス要件をヒアリングしないと、運用に入っていくと使えない、というのは納得。ヒアリングをして、テーブル設計をしていくことが何回か出てきます。見えるところだけではなく、ビジネス要件を聞くことが、テーブル設計の前提にあるのを忘れないようにします。</p>
+
+<h3>データーベース設計で手を抜くと、プログラムに負担をかける</h3>
+
+<p>実感中&hellip;</p>
+
+<h3>設計の手順</h3>
+
+<ul>
+<li>大まかにブロック分けする</li>
+<li>ブロック毎にイベント系を洗い出す</li>
+<li>イベント系に対する正規化をして、リソース系を洗い出す</li>
+<li>リソース系に対する分類の洗い出しを行なって、リソース系の正規化を行う</li>
+<li>ブロック間でリソース系の統合を行い、さらに正規化を、行う</li>
+<li>導出系の整理をして、最終的な正規化を行う</li>
+</ul>
+
+<h2>Amazon</h2>
+
+<p><a href="https://www.amazon.co.jp/dp/4798110663/"><img src="http://images-jp.amazon.com/images/P/4798110663.09.MAIN._SCLZZZZZZZ_.jpg" alt="4798110663.09.main. sclzzzzzzz " /></a></p>
+
+</div>
+<div class='blog-paging'>
+<div class='button previous'>
+<a href="/articles/2017/04/book_coach.html">前の記事</a>
+</div>
+<div class='button next'>
+<a href="/articles/2017/04/book_db_design.html">次の記事</a>
+</div>
+</div>
+<ul class='tags'>
+<li class='tag'><a href="/tags/books.html"># books</a></li>
+</ul>
+<h2>最新記事（10件）</h2>
+<div class='item-horizontal'>
+<div class='item-horizontal__scroll'>
+<ul class='item-horizontal__scroll__list'>
+<li id='item_1'><div class='article-horizontal'>
+<a href="/articles/2017/10/evet_railsdm_6.html"><time>2017年10月19日</time>
+<h2>Rails Developers Meetup&nbsp;#6&nbsp;#railsdm&nbsp;で登壇しました</h2>
+</a></div>
+</li>
+<li id='item_2'><div class='article-horizontal'>
+<a href="/articles/2017/08/evet_rails_developers_meetup_4.html"><time>2017年8月24日</time>
+<h2>「Rails Developers Meetup 4」に参加しました&nbsp;#railsdm</h2>
+</a></div>
+</li>
+<li id='item_3'><div class='article-horizontal'>
+<a href="/articles/2017/08/event_engineers-join-design-review-2017.html"><time>2017年8月8日</time>
+<h2>「デザインレビューにエンジニアも参加してみよう」の講師をしました</h2>
+</a></div>
+</li>
+<li id='item_4'><div class='article-horizontal'>
+<a href="/articles/2017/07/book_comic_blue_ocean_strategy.html"><time>2017年7月18日</time>
+<h2>「マンガでやさしくわかるブルー・オーシャン戦略」を読みました</h2>
+</a></div>
+</li>
+<li id='item_5'><div class='article-horizontal'>
+<a href="/articles/2017/07/book_effective_ruby.html"><time>2017年7月10日</time>
+<h2>「Effective Ruby」を読みました</h2>
+</a></div>
+</li>
+<li id='item_6'><div class='article-horizontal'>
+<a href="/articles/2017/06/event_med_beer.html"><time>2017年6月28日</time>
+<h2>「MedBeer -Rails 5.1での開発について-」に参加しました&nbsp;#medbeer</h2>
+</a></div>
+</li>
+<li id='item_7'><div class='article-horizontal'>
+<a href="/articles/2017/06/evet_rails_developers_meetup_2.html"><time>2017年6月22日</time>
+<h2>「Rails Developers Meetup 2」に参加しました&nbsp;#railsdm</h2>
+</a></div>
+</li>
+<li id='item_8'><div class='article-horizontal'>
+<a href="/articles/2017/06/event_omotesando.html"><time>2017年6月1日</time>
+<h2>「表参道.rb 23 Ruby/Railsの学び方」に参加しました&nbsp;#omotesandorb</h2>
+</a></div>
+</li>
+<li id='item_9'><div class='article-horizontal'>
+<a href="/articles/2017/04/book_db_design.html"><time>2017年4月25日</time>
+<h2>「達人に学ぶDB設計 徹底指南書」を読みました</h2>
+</a></div>
+</li>
+<li id='item_10'><div class='article-horizontal'>
+<a href="/articles/2017/04/book_erd.html"><time>2017年4月19日</time>
+<h2>「楽々ERDレッスン」を読みました</h2>
+</a></div>
+</li>
+</ul>
+</div>
+</div>
+<h2>タグ一覧</h2>
+<ul class='tags'>
+<li class='tag'><a href="/tags/rails.html"># rails</a></li>
+<li class='tag'><a href="/tags/event.html"># event</a></li>
+<li class='tag'><a href="/tags/ruby.html"># ruby</a></li>
+<li class='tag'><a href="/tags/study.html"># study</a></li>
+<li class='tag'><a href="/tags/design.html"># design</a></li>
+<li class='tag'><a href="/tags/books.html"># books</a></li>
+<li class='tag'><a href="/tags/work.html"># work</a></li>
+<li class='tag'><a href="/tags/gadget.html"># gadget</a></li>
+<li class='tag'><a href="/tags/movie.html"># movie</a></li>
+<li class='tag'><a href="/tags/food.html"># food</a></li>
+<li class='tag'><a href="/tags/taiwan.html"># taiwan</a></li>
+<li class='tag'><a href="/tags/memo.html"># memo</a></li>
+<li class='tag'><a href="/tags/life.html"># life</a></li>
+<li class='tag'><a href="/tags/tech.html"># tech</a></li>
+<li class='tag'><a href="/tags/github.html"># github</a></li>
+</ul>
+<hr>
+<footer>
+<ul>
+<li>筆者について</li>
+<li><a href="https://twitter.com/kamonegi1977">twitter</a></li>
+<li><a href="https://github.com/matsuhisa">github</a></li>
+<li><a href="https://speakerdeck.com/matsuhisa">Speaker Deck</a></li>
+<li><a href="http://qiita.com/matsuhisa_h">Qiita</a></li>
+<li><a href="https://500px.com/matsuhisa">500px</a></li>
+<li><a href="https://www.flickr.com/photos/matsuhisa/">flickr</a></li>
+</ul>
+</footer>
+</div>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-89508188-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

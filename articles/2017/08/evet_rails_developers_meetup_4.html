@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta charset='utf-8'>
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'>
+<title>「Rails Developers Meetup 4」に参加しました&nbsp;#railsdm | めも帖</title>
+<link href="/stylesheets/site.css" rel="stylesheet" />
+<script src="/javascripts/all.js"></script>
+<link href='http://a-walker.me/articles/2017/08/evet_rails_developers_meetup_4.html' rel='canonical'>
+<meta content='Pocke さんが話す！伊藤（jnchito）さんが話す！「Rails Developers Meetup 4」に参加してきました' name='description'>
+<meta content='' property='og:site_name'>
+<meta content='「Rails Developers Meetup 4」に参加しました&amp;nbsp;#railsdm' property='og:title'>
+<meta content='' property='og:image'>
+<meta content='Pocke さんが話す！伊藤（jnchito）さんが話す！「Rails Developers Meetup 4」に参加してきました' property='og:description'>
+<meta content='' property='og:url'>
+<meta content='summary_large_image' name='twitter:card'>
+<meta content='' name='twitter:site'>
+<meta content='「Rails Developers Meetup 4」に参加しました&amp;nbsp;#railsdm' name='twitter:title'>
+<meta content='' name='twitter:image:src'>
+<meta content='Pocke さんが話す！伊藤（jnchito）さんが話す！「Rails Developers Meetup 4」に参加してきました' name='twitter:description'>
+</head>
+<body></body>
+<p class='blog_title'><a href="/">めも帖</a></p>
+<div class='wrapper'>
+<h1>「Rails Developers Meetup 4」に参加しました&nbsp;#railsdm</h1>
+<div class='article'>
+<time>2017年8月24日</time>
+<p>「<a href="https://rails-developers-meetup.connpass.com/event/62792/">Rails Developers Meetup 4</a>」に参加してきました。</p>
+
+<ul>
+<li>場所が、マネーフォワードで行ったことがなかった</li>
+<li>Pocke さんが話す！</li>
+<li>伊藤（<a href="https://twitter.com/jnchito/">@jnchito</a>）さんが話す！</li>
+</ul>
+
+<h1>まとめ</h1>
+
+<ul>
+<li>公開コードレビューは、普段の業務でも同じような話をしているので納得感が大きい。特に二人目の人のコードレビューは、レビューで気づくいいところだったと思いました</li>
+<li>tachikoma！という気持ち</li>
+<li>マネーフォワードさん、派手じゃないけれど、手堅い感じのオフィスでいい</li>
+</ul>
+
+<h1>メモ</h1>
+
+<h2>Dive into Rubygems</h2>
+
+<ul>
+<li>Rails でも 70 ぐらいの gem に依存している</li>
+<li>Gem の歩き方
+
+<ul>
+<li>gem-src を使う</li>
+<li>peco 使っている</li>
+</ul></li>
+<li>tempgem を使うと一時的に gem をインストールできる</li>
+<li>time コマンド。3秒以上かかったコマンドは時間を表示する .zshrc に書いてある</li>
+</ul>
+
+<h2>プロを目指すRailsエンジニアのための公開コードレビュー</h2>
+
+<ul>
+<li>シュッとした顔立ちだった（PhotoShopで加工されていない）</li>
+<li><a href="https://github.com/JunichiIto/train-ticket-rails/pull/27">https://github.com/JunichiIto/train-ticket-rails/pull/27</a>
+
+<ul>
+<li>27行目はメソッドにまとめる</li>
+</ul></li>
+<li><a href="https://github.com/JunichiIto/train-ticket-rails/pull/15">https://github.com/JunichiIto/train-ticket-rails/pull/15</a>
+
+<ul>
+<li>app/models/gate.rb:19 の 0 が特別な意味がでている</li>
+<li>app/models/ticket.rb:3</li>
+<li>must<em>be</em>exit 英文法的に NG</li>
+</ul></li>
+<li><a href="https://github.com/JunichiIto/train-ticket-rails/tree/answer">https://github.com/JunichiIto/train-ticket-rails/tree/answer</a></li>
+</ul>
+
+<h3>気になった点</h3>
+
+<ul>
+<li>使用済みの切符を表すコード
+
+<ul>
+<li>インスタンスメソッドを作って抽象化</li>
+<li>わかりやす名前で</li>
+</ul></li>
+<li>?がつくメソッド
+
+<ul>
+<li><a href="https://github.com/JunichiIto/train-ticket-rails/pull/10/files#diff-1a01f34da84dcb589b607e99187dc18aR51">https://github.com/JunichiIto/train-ticket-rails/pull/10/files#diff-1a01f34da84dcb589b607e99187dc18aR51</a></li>
+<li>validate を使う</li>
+<li>真偽値を返すだけがいい</li>
+<li>ActiveRecord Valid?メソッド は例外</li>
+</ul></li>
+<li><p>return っている？</p></li>
+<li><p>メソッドの責務</p></li>
+<li><p>抽象化。意図がわかる名前がよい</p></li>
+<li><p>不要なコンテキストをなくそう</p></li>
+<li><p>Railsの機能を使いこなそう</p></li>
+<li><p>後置if の使い分け。ガードせつでやることがおおい。多用はしていない</p></li>
+<li><p><a href="http://blog.jnito.com/entry/2017/08/26/090024">「プロを目指すRailsエンジニアのための公開コードレビュー」という発表をしました #railsdm</a></p></li>
+</ul>
+
+<h2>Bye tachikoma gem</h2>
+
+<ul>
+<li>tachikoma deprecated する</li>
+<li>刺身ブーメランさんが元ネタ
+
+<ul>
+<li>RubyKaigi 2013</li>
+</ul></li>
+<li>2015/12 に同じ資料を作っていた&hellip;</li>
+<li>MoneyFordでも同じ？
+
+<ul>
+<li>tachikoma という名前だけれど、tachikoma.gem じゃない&hellip;</li>
+</ul></li>
+<li>Saddler gem
+
+<ul>
+<li>Reviewdog 便利。察さなくても README.md でわかる</li>
+</ul></li>
+<li><a href="https://www.slideshare.net/sanemat/byetachikomagem">資料</a></li>
+</ul>
+
+<h2>Rubyistだった私がRailsでマネーフォワードAPIの開発に携わって</h2>
+
+<ul>
+<li>Ruby は自然言語ににている</li>
+<li>ブロック
+
+<ul>
+<li>従属節</li>
+</ul></li>
+<li>三人称単数現在形</li>
+<li>Railsの前にRubyやろう</li>
+<li>認証認可
+
+<ul>
+<li>doorkeeper openid conect を使っている</li>
+</ul></li>
+</ul>
+
+<h2>Railsで新規サービスを開発する際にやったこと</h2>
+
+<ul>
+<li>yadokari</li>
+<li>テストは必ず書く、というルール</li>
+</ul>
+
+<h2>Webpacker is installed</h2>
+
+<ul>
+<li>webpacker 試してみようか</li>
+</ul>
+
+</div>
+<div class='blog-paging'>
+<div class='button previous'>
+<a href="/articles/2017/08/event_engineers-join-design-review-2017.html">前の記事</a>
+</div>
+<div class='button next'>
+<a href="/articles/2017/10/evet_railsdm_6.html">次の記事</a>
+</div>
+</div>
+<ul class='tags'>
+<li class='tag'><a href="/tags/event.html"># event</a></li>
+<li class='tag'><a href="/tags/study.html"># study</a></li>
+<li class='tag'><a href="/tags/ruby.html"># ruby</a></li>
+</ul>
+<h2>最新記事（10件）</h2>
+<div class='item-horizontal'>
+<div class='item-horizontal__scroll'>
+<ul class='item-horizontal__scroll__list'>
+<li id='item_1'><div class='article-horizontal'>
+<a href="/articles/2017/10/evet_railsdm_6.html"><time>2017年10月19日</time>
+<h2>Rails Developers Meetup&nbsp;#6&nbsp;#railsdm&nbsp;で登壇しました</h2>
+</a></div>
+</li>
+<li id='item_2'><div class='article-horizontal'>
+<a href="/articles/2017/08/evet_rails_developers_meetup_4.html"><time>2017年8月24日</time>
+<h2>「Rails Developers Meetup 4」に参加しました&nbsp;#railsdm</h2>
+</a></div>
+</li>
+<li id='item_3'><div class='article-horizontal'>
+<a href="/articles/2017/08/event_engineers-join-design-review-2017.html"><time>2017年8月8日</time>
+<h2>「デザインレビューにエンジニアも参加してみよう」の講師をしました</h2>
+</a></div>
+</li>
+<li id='item_4'><div class='article-horizontal'>
+<a href="/articles/2017/07/book_comic_blue_ocean_strategy.html"><time>2017年7月18日</time>
+<h2>「マンガでやさしくわかるブルー・オーシャン戦略」を読みました</h2>
+</a></div>
+</li>
+<li id='item_5'><div class='article-horizontal'>
+<a href="/articles/2017/07/book_effective_ruby.html"><time>2017年7月10日</time>
+<h2>「Effective Ruby」を読みました</h2>
+</a></div>
+</li>
+<li id='item_6'><div class='article-horizontal'>
+<a href="/articles/2017/06/event_med_beer.html"><time>2017年6月28日</time>
+<h2>「MedBeer -Rails 5.1での開発について-」に参加しました&nbsp;#medbeer</h2>
+</a></div>
+</li>
+<li id='item_7'><div class='article-horizontal'>
+<a href="/articles/2017/06/evet_rails_developers_meetup_2.html"><time>2017年6月22日</time>
+<h2>「Rails Developers Meetup 2」に参加しました&nbsp;#railsdm</h2>
+</a></div>
+</li>
+<li id='item_8'><div class='article-horizontal'>
+<a href="/articles/2017/06/event_omotesando.html"><time>2017年6月1日</time>
+<h2>「表参道.rb 23 Ruby/Railsの学び方」に参加しました&nbsp;#omotesandorb</h2>
+</a></div>
+</li>
+<li id='item_9'><div class='article-horizontal'>
+<a href="/articles/2017/04/book_db_design.html"><time>2017年4月25日</time>
+<h2>「達人に学ぶDB設計 徹底指南書」を読みました</h2>
+</a></div>
+</li>
+<li id='item_10'><div class='article-horizontal'>
+<a href="/articles/2017/04/book_erd.html"><time>2017年4月19日</time>
+<h2>「楽々ERDレッスン」を読みました</h2>
+</a></div>
+</li>
+</ul>
+</div>
+</div>
+<h2>タグ一覧</h2>
+<ul class='tags'>
+<li class='tag'><a href="/tags/rails.html"># rails</a></li>
+<li class='tag'><a href="/tags/event.html"># event</a></li>
+<li class='tag'><a href="/tags/ruby.html"># ruby</a></li>
+<li class='tag'><a href="/tags/study.html"># study</a></li>
+<li class='tag'><a href="/tags/design.html"># design</a></li>
+<li class='tag'><a href="/tags/books.html"># books</a></li>
+<li class='tag'><a href="/tags/work.html"># work</a></li>
+<li class='tag'><a href="/tags/gadget.html"># gadget</a></li>
+<li class='tag'><a href="/tags/movie.html"># movie</a></li>
+<li class='tag'><a href="/tags/food.html"># food</a></li>
+<li class='tag'><a href="/tags/taiwan.html"># taiwan</a></li>
+<li class='tag'><a href="/tags/memo.html"># memo</a></li>
+<li class='tag'><a href="/tags/life.html"># life</a></li>
+<li class='tag'><a href="/tags/tech.html"># tech</a></li>
+<li class='tag'><a href="/tags/github.html"># github</a></li>
+</ul>
+<hr>
+<footer>
+<ul>
+<li>筆者について</li>
+<li><a href="https://twitter.com/kamonegi1977">twitter</a></li>
+<li><a href="https://github.com/matsuhisa">github</a></li>
+<li><a href="https://speakerdeck.com/matsuhisa">Speaker Deck</a></li>
+<li><a href="http://qiita.com/matsuhisa_h">Qiita</a></li>
+<li><a href="https://500px.com/matsuhisa">500px</a></li>
+<li><a href="https://www.flickr.com/photos/matsuhisa/">flickr</a></li>
+</ul>
+</footer>
+</div>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-89508188-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>

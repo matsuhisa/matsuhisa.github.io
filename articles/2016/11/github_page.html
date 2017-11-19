@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta charset='utf-8'>
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'>
+<title>GitHub Pages の設定をしてみた | めも帖</title>
+<link href="/stylesheets/site.css" rel="stylesheet" />
+<script src="/javascripts/all.js"></script>
+<link href='http://a-walker.me/articles/2016/11/github_page.html' rel='canonical'>
+<meta content='GitHub Pages の設定をしてみました。はまったことが多かったのでメモ' name='description'>
+<meta content='' property='og:site_name'>
+<meta content='GitHub Pages の設定をしてみた' property='og:title'>
+<meta content='' property='og:image'>
+<meta content='GitHub Pages の設定をしてみました。はまったことが多かったのでメモ' property='og:description'>
+<meta content='' property='og:url'>
+<meta content='summary_large_image' name='twitter:card'>
+<meta content='' name='twitter:site'>
+<meta content='GitHub Pages の設定をしてみた' name='twitter:title'>
+<meta content='' name='twitter:image:src'>
+<meta content='GitHub Pages の設定をしてみました。はまったことが多かったのでメモ' name='twitter:description'>
+</head>
+<body></body>
+<p class='blog_title'><a href="/">めも帖</a></p>
+<div class='wrapper'>
+<h1>GitHub Pages の設定をしてみた</h1>
+<div class='article'>
+<time>2016年11月10日</time>
+<p><a href="https://pages.github.com/">GitHub Pages</a> の設定をしてみました。はまったことが多かったのでメモです。</p>
+
+<h2>Middleman の利用</h2>
+
+<p><a href="https://middlemanapp.com/jp/">Middleman</a> を利用してHTMLを生成することにしました。
+Markdown で、記事を書くことができるのが便利です。</p>
+
+<p>WordPress / MovableType もいいんですが、</p>
+
+<ul>
+<li>デプロイもコマンドで終わらせたい</li>
+<li>動的に生成する必要がない</li>
+<li>Ruby で（が）やりたい</li>
+</ul>
+
+<p>という理由で、Middleman を選びました。
+Middleman のインストールや利用方法については、ここでは特には書きません。</p>
+
+<h2>GitHub Pages を利用する 2 つの方法</h2>
+
+<ul>
+<li><a href="https://matsuhisa.github.io/project_name">https://matsuhisa.github.io/project_name</a> となる方法</li>
+<li><a href="https://matsuhisa.github.io/">https://matsuhisa.github.io/</a> となる方法</li>
+<li>今回試したのは、2つめの方法</li>
+</ul>
+
+<h2>Github のリポジトリ</h2>
+
+<ul>
+<li>ユーザ名がmatsuhisa であれば、 <a href="https://matsuhisa.github.io">https://matsuhisa.github.io</a> というURLになる</li>
+<li>生成する前のコードは、<a href="https://github.com/matsuhisa/matsuhisa.github.io.souces">matsuhisa.github.io.souces</a> という名前のリポジトリに作る</li>
+<li><a href="https://github.com/matsuhisa/matsuhisa.github.io">matsuhisa.github.io</a> というリポジトリを作る。これが公開されるブランチになる</li>
+</ul>
+
+<h2>GitHub Pages への deploy</h2>
+
+<p><code>matsuhisa.github.io</code> を remote 先として追加します</p>
+<div class="highlight"><pre class="highlight shell"><code>git remote add public git@github.com:matsuhisa/matsuhisa.github.io.git
+</code></pre></div>
+<p>Middleman の config.rb に下記を追加します</p>
+<div class="highlight"><pre class="highlight ruby"><code><span class="n">activate</span> <span class="ss">:deploy</span> <span class="k">do</span> <span class="o">|</span><span class="n">deploy</span><span class="o">|</span>
+  <span class="n">deploy</span><span class="p">.</span><span class="nf">deploy_method</span> <span class="o">=</span> <span class="ss">:git</span>
+  <span class="n">deploy</span><span class="p">.</span><span class="nf">branch</span> <span class="o">=</span> <span class="s1">'master'</span>
+  <span class="n">deploy</span><span class="p">.</span><span class="nf">remote</span> <span class="o">=</span> <span class="s1">'public'</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>build すると、HTML ファイルが生成されます。</p>
+<div class="highlight"><pre class="highlight plaintext"><code>bundle exec middleman build
+</code></pre></div>
+<p>deploy します</p>
+<div class="highlight"><pre class="highlight plaintext"><code>bundle exec middleman server
+</code></pre></div>
+</div>
+<div class='blog-paging'>
+<div class='button previous'>
+<a href="/articles/2016/11/movie.html">前の記事</a>
+</div>
+<div class='button next'>
+<a href="/articles/2016/11/furniture.html">次の記事</a>
+</div>
+</div>
+<ul class='tags'>
+<li class='tag'><a href="/tags/github.html"># github</a></li>
+<li class='tag'><a href="/tags/memo.html"># memo</a></li>
+<li class='tag'><a href="/tags/tech.html"># tech</a></li>
+</ul>
+<h2>最新記事（10件）</h2>
+<div class='item-horizontal'>
+<div class='item-horizontal__scroll'>
+<ul class='item-horizontal__scroll__list'>
+<li id='item_1'><div class='article-horizontal'>
+<a href="/articles/2017/10/evet_railsdm_6.html"><time>2017年10月19日</time>
+<h2>Rails Developers Meetup&nbsp;#6&nbsp;#railsdm&nbsp;で登壇しました</h2>
+</a></div>
+</li>
+<li id='item_2'><div class='article-horizontal'>
+<a href="/articles/2017/08/evet_rails_developers_meetup_4.html"><time>2017年8月24日</time>
+<h2>「Rails Developers Meetup 4」に参加しました&nbsp;#railsdm</h2>
+</a></div>
+</li>
+<li id='item_3'><div class='article-horizontal'>
+<a href="/articles/2017/08/event_engineers-join-design-review-2017.html"><time>2017年8月8日</time>
+<h2>「デザインレビューにエンジニアも参加してみよう」の講師をしました</h2>
+</a></div>
+</li>
+<li id='item_4'><div class='article-horizontal'>
+<a href="/articles/2017/07/book_comic_blue_ocean_strategy.html"><time>2017年7月18日</time>
+<h2>「マンガでやさしくわかるブルー・オーシャン戦略」を読みました</h2>
+</a></div>
+</li>
+<li id='item_5'><div class='article-horizontal'>
+<a href="/articles/2017/07/book_effective_ruby.html"><time>2017年7月10日</time>
+<h2>「Effective Ruby」を読みました</h2>
+</a></div>
+</li>
+<li id='item_6'><div class='article-horizontal'>
+<a href="/articles/2017/06/event_med_beer.html"><time>2017年6月28日</time>
+<h2>「MedBeer -Rails 5.1での開発について-」に参加しました&nbsp;#medbeer</h2>
+</a></div>
+</li>
+<li id='item_7'><div class='article-horizontal'>
+<a href="/articles/2017/06/evet_rails_developers_meetup_2.html"><time>2017年6月22日</time>
+<h2>「Rails Developers Meetup 2」に参加しました&nbsp;#railsdm</h2>
+</a></div>
+</li>
+<li id='item_8'><div class='article-horizontal'>
+<a href="/articles/2017/06/event_omotesando.html"><time>2017年6月1日</time>
+<h2>「表参道.rb 23 Ruby/Railsの学び方」に参加しました&nbsp;#omotesandorb</h2>
+</a></div>
+</li>
+<li id='item_9'><div class='article-horizontal'>
+<a href="/articles/2017/04/book_db_design.html"><time>2017年4月25日</time>
+<h2>「達人に学ぶDB設計 徹底指南書」を読みました</h2>
+</a></div>
+</li>
+<li id='item_10'><div class='article-horizontal'>
+<a href="/articles/2017/04/book_erd.html"><time>2017年4月19日</time>
+<h2>「楽々ERDレッスン」を読みました</h2>
+</a></div>
+</li>
+</ul>
+</div>
+</div>
+<h2>タグ一覧</h2>
+<ul class='tags'>
+<li class='tag'><a href="/tags/rails.html"># rails</a></li>
+<li class='tag'><a href="/tags/event.html"># event</a></li>
+<li class='tag'><a href="/tags/ruby.html"># ruby</a></li>
+<li class='tag'><a href="/tags/study.html"># study</a></li>
+<li class='tag'><a href="/tags/design.html"># design</a></li>
+<li class='tag'><a href="/tags/books.html"># books</a></li>
+<li class='tag'><a href="/tags/work.html"># work</a></li>
+<li class='tag'><a href="/tags/gadget.html"># gadget</a></li>
+<li class='tag'><a href="/tags/movie.html"># movie</a></li>
+<li class='tag'><a href="/tags/food.html"># food</a></li>
+<li class='tag'><a href="/tags/taiwan.html"># taiwan</a></li>
+<li class='tag'><a href="/tags/memo.html"># memo</a></li>
+<li class='tag'><a href="/tags/life.html"># life</a></li>
+<li class='tag'><a href="/tags/tech.html"># tech</a></li>
+<li class='tag'><a href="/tags/github.html"># github</a></li>
+</ul>
+<hr>
+<footer>
+<ul>
+<li>筆者について</li>
+<li><a href="https://twitter.com/kamonegi1977">twitter</a></li>
+<li><a href="https://github.com/matsuhisa">github</a></li>
+<li><a href="https://speakerdeck.com/matsuhisa">Speaker Deck</a></li>
+<li><a href="http://qiita.com/matsuhisa_h">Qiita</a></li>
+<li><a href="https://500px.com/matsuhisa">500px</a></li>
+<li><a href="https://www.flickr.com/photos/matsuhisa/">flickr</a></li>
+</ul>
+</footer>
+</div>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-89508188-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>
